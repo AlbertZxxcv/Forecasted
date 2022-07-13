@@ -15,7 +15,7 @@ export default class Body extends Component {
         home ? <Home/> :
         product? <Product/> :
         comment? <Comment comments = {this.state.comments}/>:
-        post? <Post/> : <h1>error</h1>
+        post? <Post/> : <h1>error1</h1>
       }
       </div>
     )
