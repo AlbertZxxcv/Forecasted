@@ -1,0 +1,48 @@
+#ItemBody{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    border-style: solid solid none solid;
+    border-width: 1px;
+    padding-top: 0%;
+}
+
+#number{
+    border-style: none none solid none;
+    border-width: 1px;
+    background-color: gray;
+}
+
+#headDiv{
+    width: 85%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headDiv > h4{
+    margin: 2%;
+}
+
+
+#commentText{
+    background-color:aquamarine;
+    display:block;
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#textArea{
+    width: 80%;
+    margin-left: 10%;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: left;
+    display: flex;
+}
+
+#commentText  p{
+    margin: 2%;
+}

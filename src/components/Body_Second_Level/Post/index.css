@@ -1,0 +1,42 @@
+#postBody{
+    width: 80%;
+    margin-left: 10%;
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#postBody > h2{
+    width: 100%;
+    text-align: center;
+}
+
+#inputArea{
+    display: flex;
+    width: 100%;
+}
+
+#postInformation{
+    width: 50%;
+}
+
+.leftInput{
+    width: 80%;
+    margin-left: 10%;
+    height: 35px;
+    margin-bottom: 5%;
+}
+
+#postText{
+    width: 50%;
+}
+
+#postText > input{
+    margin-left: 20%;
+    height: 120px;
+    width: 80%;
+}
+
+#submitBtn{
+    width: 20%;
+    margin-left: 40%;
+}

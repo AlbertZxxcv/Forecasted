@@ -1,0 +1,54 @@
+#titleBorder{
+    width: 100%;
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#titleContent{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#secondLayer{
+    width: 100%;
+    border-style: none none solid none;
+    border-width: 1px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#overviewImg{
+    width: 45%;
+    margin-left: 5%;
+}
+
+#overviewImg > img{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#detailExplain{
+    width: 45%;
+    border-style: none none none solid;
+    border-width: 1px;
+}
+
+#detailExplain > h3{
+    margin-left: 10%;
+}
+
+#detailExplain > p{
+    margin-left: 10%;
+}
+
+#thirdLayer{
+    width: 100%;
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#thirdContent{
+    width: 80%;
+    margin-left: 10%;
+}

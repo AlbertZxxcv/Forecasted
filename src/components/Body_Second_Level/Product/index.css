@@ -1,0 +1,27 @@
+#outBorder {
+    width: 70%;
+    border-style: solid solid none solid;
+    border-width: 1px;
+    margin-left: 15%;
+}
+
+#content {
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#weatherDispaly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#margin {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
