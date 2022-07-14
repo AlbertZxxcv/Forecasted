@@ -1,8 +1,11 @@
+#postBorder{
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
 #postBody{
     width: 80%;
     margin-left: 10%;
-    border-style: none none solid none;
-    border-width: 1px;
 }
 
 #postBody > h2{
@@ -39,4 +42,5 @@
 #submitBtn{
     width: 20%;
     margin-left: 40%;
+    margin-bottom: 2%;
 }
