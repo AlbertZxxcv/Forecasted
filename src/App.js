@@ -26,7 +26,7 @@ export default class App extends Component {
     return (
       <div className='body'>
         <Head switchPage = {this.switchPage} {...this.state}/>
-        <Body {...this.state}/>
+        <Body {...this.state} switchPage = {this.switchPage}/>
       </div>
     )
   }

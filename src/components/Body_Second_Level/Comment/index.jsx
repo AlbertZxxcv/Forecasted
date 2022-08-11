@@ -13,7 +13,7 @@ export default class Comment extends Component {
           <div id='commentBody'>
             {
               comments.map((obj, index)=>{
-                return <Item key={obj.id} content = {obj.content} number = {index+1}/>
+                return <Item key={obj.id} content = {obj.user_pic} number = {index+1}/>
               })
             }
           </div>
