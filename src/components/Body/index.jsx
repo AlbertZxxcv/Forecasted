@@ -31,8 +31,11 @@ export default class Body extends Component {
       xhr.open("POST", url);
       console.log("This is the body in sendpostAjax ", body)
       // 设置请求头信息
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+      // xhr.setRequestHeader({'Content-Type':' application/x-www-form-urlencoded', 
+      // 'Access-Control-Allow-Origin':'POST'})
+      xhr.setRequestHeader('Content-Type',' application/x-www-form-urlencoded', 
+      'Access-Control-Allow-Origin','POST')
+      // xhr.addRequestHeader('Access-Control-Allow-Origin', 'POST');
       xhr.send(body);
       // handle the result
       xhr.onreadystatechange = function () {
@@ -49,8 +52,9 @@ export default class Body extends Component {
   state = {comments : []}
 
   componentDidMount(){
-    this.sendAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1").then(value =>{
-      let array = value.results
+    this.sendAjax("https://jc91700mg0.execute-api.us-east-2.amazonaws.com/forecastStage").then(value =>{
+      console.log(value.body.Items)
+      let array = value.body.Items
       this.setState({comments: array})
     }, reason =>{
       console.warn(reason);
@@ -64,11 +68,11 @@ export default class Body extends Component {
 
   changeComments = (text, name, phone, email)=>{
     const {switchPage} = this.props
-    let body = "username=" + name + "&password=a&text="+text 
+    let body = "date=" + name + "&text="+text 
     console.log(body)
-    this.sendPostAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1", body).then(value=>{
+    this.sendPostAjax("https://jc91700mg0.execute-api.us-east-2.amazonaws.com/forecastStage", body).then(value=>{
       console.log(value)
-      this.sendAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1").then(value =>{
+      this.sendAjax("https://jc91700mg0.execute-api.us-east-2.amazonaws.com/forecastStage").then(value =>{
       // console.log(value)
       let array = value.results
       this.setState({comments: array})
