@@ -32,6 +32,7 @@ export default class Body extends Component {
       console.log("This is the body in sendpostAjax ", body)
       // 设置请求头信息
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
       xhr.send(body);
       // handle the result
       xhr.onreadystatechange = function () {
@@ -48,7 +49,7 @@ export default class Body extends Component {
   state = {comments : []}
 
   componentDidMount(){
-    this.sendAjax("http://127.0.0.1:3007/api/comment").then(value =>{
+    this.sendAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1").then(value =>{
       let array = value.results
       this.setState({comments: array})
     }, reason =>{
@@ -65,9 +66,9 @@ export default class Body extends Component {
     const {switchPage} = this.props
     let body = "username=" + name + "&password=a&text="+text 
     console.log(body)
-    this.sendPostAjax("http://127.0.0.1:3007/api/add", body).then(value=>{
+    this.sendPostAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1", body).then(value=>{
       console.log(value)
-      this.sendAjax("http://127.0.0.1:3007/api/comment").then(value =>{
+      this.sendAjax("https://u8pmks2bql.execute-api.us-east-2.amazonaws.com/dbtest1").then(value =>{
       // console.log(value)
       let array = value.results
       this.setState({comments: array})
